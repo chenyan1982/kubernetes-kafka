@@ -30,6 +30,9 @@ metadata:
 spec:
   serviceName: kafka-hs
   replicas: 1
+  selector:
+    matchLabels:
+      app: kafka
   podManagementPolicy: Parallel
   updateStrategy:
     type: RollingUpdate
